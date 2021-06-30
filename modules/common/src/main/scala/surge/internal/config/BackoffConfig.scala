@@ -4,6 +4,8 @@ package surge.internal.config
 
 import com.typesafe.config.ConfigFactory
 
+import java.time.Duration
+
 object BackoffConfig {
   private val config = ConfigFactory.load()
 
@@ -15,10 +17,10 @@ object BackoffConfig {
   }
 
   object GlobalKTableKafkaStreamActor {
-    val minBackoff = config.getDuration("surge.global-ktable-actor.backoff.min-backoff")
-    val maxBackoff = config.getDuration("surge.global-ktable-actor.backoff.max-backoff")
-    val randomFactor = config.getDouble("surge.global-ktable-actor.backoff.random-factor")
-    val maxRetries = config.getInt("surge.global-ktable-actor.backoff.max-retries")
+    val minBackoff: Duration = config.getDuration("surge.global-ktable-actor.backoff.min-backoff")
+    val maxBackoff: Duration = config.getDuration("surge.global-ktable-actor.backoff.max-backoff")
+    val randomFactor: Double = config.getDouble("surge.global-ktable-actor.backoff.random-factor")
+    val maxRetries: Int = config.getInt("surge.global-ktable-actor.backoff.max-retries")
   }
 
   object HealthSignalWindowActor {
