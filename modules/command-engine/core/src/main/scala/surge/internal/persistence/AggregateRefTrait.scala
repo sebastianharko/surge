@@ -5,12 +5,13 @@ package surge.internal.persistence
 import akka.actor.ActorRef
 import akka.pattern._
 import akka.util.Timeout
-import io.opentracing.{ Span, Tracer }
+import io.opentelemetry.api.trace.{ Span, Tracer }
 import org.slf4j.{ Logger, LoggerFactory }
 import surge.exceptions.{ SurgeTimeoutException, SurgeUnexpectedException }
 import surge.internal.config.TimeoutConfig
-import surge.internal.tracing.SpanExtensions._
+import surge.internal.tracing.TracingHelper._
 import surge.internal.tracing.{ SpanSupport, TracedMessage }
+
 import scala.concurrent.{ ExecutionContext, Future }
 
 /**

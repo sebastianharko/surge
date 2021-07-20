@@ -33,12 +33,9 @@ object Dependencies extends AutoPlugin {
       val kafkaStreamsTestUtils = "org.apache.kafka" % "kafka-streams-test-utils" % kafkaVersion % Test
     }
 
-    object OpenTracing {
+    object OpenTelemetry {
       val version = "0.33.0"
-      val api = "io.opentracing" % "opentracing-api" % version
-      val mock = "io.opentracing" % "opentracing-mock" % version % Test
-      val noop = "io.opentracing" % "opentracing-noop" % version
-      val jaeger = "io.jaegertracing" % "jaeger-client" % "1.6.0" % Test // example in surge-docs
+      val api = "io.opentelemetry" % "opentelemetry-api" % "1.4.1"
     }
 
     object PlayFramework {

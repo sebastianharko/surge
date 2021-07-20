@@ -37,9 +37,7 @@ lazy val `surge-common` = (project in file("modules/common"))
       Kafka.kafkaStreams,
       Kafka.kafkaStreamsScala,
       Kafka.kafkaStreamsTestUtils,
-      OpenTracing.api,
-      OpenTracing.mock,
-      OpenTracing.noop,
+      OpenTelemetry.api,
       PlayFramework.json,
       typesafeConfig,
       Akka.akkaStreamTestKit,
@@ -96,7 +94,7 @@ lazy val `surge-docs` = (project in file("modules/surge-docs"))
   .settings(
     skip in publish := true,
     paradoxTheme := Some(builtinParadoxTheme("generic")),
-    libraryDependencies ++= Seq(typesafeConfig, embeddedKafka, logback, scalatest, scalatestPlusMockito, mockitoCore, OpenTracing.jaeger))
+    libraryDependencies ++= Seq(typesafeConfig, embeddedKafka, logback, scalatest, scalatestPlusMockito, mockitoCore))
 
 lazy val `surge` = project
   .in(file("."))

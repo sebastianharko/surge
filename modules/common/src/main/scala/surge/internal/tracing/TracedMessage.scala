@@ -3,7 +3,7 @@
 package surge.internal.tracing
 
 import com.fasterxml.jackson.annotation.JsonTypeInfo
-import io.opentracing.{ Span, Tracer }
+import io.opentelemetry.api.trace.{ Span, Tracer }
 import surge.akka.cluster.JacksonSerializable
 
 object TracedMessage {

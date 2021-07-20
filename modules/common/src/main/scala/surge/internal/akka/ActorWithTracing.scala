@@ -4,10 +4,10 @@ package surge.internal.akka
 
 import akka.AroundReceiveActor
 import akka.actor.ActorRef
-import io.opentracing._
-import surge.internal.tracing.{ SpanExtensions, TracePropagation, TracedMessage }
+import io.opentelemetry.api.trace.{ Span, Tracer }
+import surge.internal.tracing.{ TracePropagation, TracedMessage, TracingHelper }
 
-trait ActorWithTracing extends AroundReceiveActor with ActorOps with SpanExtensions {
+trait ActorWithTracing extends AroundReceiveActor with ActorOps with TracingHelper {
 
   type MessageNameExtractor = PartialFunction[Any, String]
 

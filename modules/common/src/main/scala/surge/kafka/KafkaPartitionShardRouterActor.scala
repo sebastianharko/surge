@@ -5,7 +5,7 @@ package surge.kafka
 import akka.actor._
 import akka.pattern._
 import com.typesafe.config.{ Config, ConfigFactory }
-import io.opentracing.Tracer
+import io.opentelemetry.api.trace.Tracer
 import org.apache.kafka.common.TopicPartition
 import org.slf4j.{ Logger, LoggerFactory }
 import surge.internal.akka.ActorWithTracing

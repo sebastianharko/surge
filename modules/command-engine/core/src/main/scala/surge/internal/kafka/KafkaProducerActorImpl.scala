@@ -6,7 +6,7 @@ import akka.actor.{ ActorRef, NoSerializationVerificationNeeded, Stash, Status, 
 import akka.pattern._
 import akka.util.Timeout
 import com.typesafe.config.{ Config, ConfigFactory }
-import io.opentracing.Tracer
+import io.opentelemetry.api.trace.Tracer
 import org.apache.kafka.clients.producer.{ ProducerConfig, ProducerRecord }
 import org.apache.kafka.common.TopicPartition
 import org.apache.kafka.common.errors.{ AuthorizationException, ProducerFencedException }

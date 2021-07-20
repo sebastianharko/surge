@@ -5,9 +5,9 @@ package surge.internal.akka.cluster
 import akka.actor.{ ActorRef, Props, Terminated }
 import akka.pattern.pipe
 import akka.util.MessageBufferMap
+import io.opentelemetry.api.trace.Tracer
 
 import java.net.URLEncoder
-import io.opentracing.{ Span, Tracer }
 import org.slf4j.{ Logger, LoggerFactory }
 import surge.akka.cluster.{ Passivate, PerShardLogicProvider }
 import surge.internal.akka.ActorWithTracing

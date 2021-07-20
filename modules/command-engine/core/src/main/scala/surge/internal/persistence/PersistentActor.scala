@@ -6,7 +6,7 @@ import akka.actor.{ NoSerializationVerificationNeeded, Props, ReceiveTimeout, St
 import akka.pattern.pipe
 import com.fasterxml.jackson.annotation.JsonTypeInfo
 import com.typesafe.config.{ Config, ConfigFactory }
-import io.opentracing.Tracer
+import io.opentelemetry.api.trace.Tracer
 import org.slf4j.{ Logger, LoggerFactory }
 import surge.akka.cluster.{ JacksonSerializable, Passivate }
 import surge.core._

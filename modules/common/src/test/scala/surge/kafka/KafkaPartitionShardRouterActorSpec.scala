@@ -4,7 +4,6 @@ package surge.kafka
 
 import akka.actor.{ Actor, ActorContext, ActorSystem, DeadLetter, Props }
 import akka.testkit.{ TestKit, TestProbe }
-import io.opentracing.noop.NoopTracerFactory
 import org.apache.kafka.common.TopicPartition
 import org.mockito.ArgumentMatchers.anyString
 import org.mockito.Mockito.when
@@ -16,7 +15,7 @@ import surge.akka.cluster.{ EntityPropsProvider, PerShardLogicProvider }
 import surge.internal.akka.cluster.ActorSystemHostAwareness
 import surge.internal.akka.kafka.{ KafkaConsumerPartitionAssignmentTracker, KafkaConsumerStateTrackingActor }
 import surge.kafka.streams.{ HealthCheck, HealthCheckStatus }
-import surge.internal.tracing.TracedMessage
+import surge.internal.tracing.{ NoopTracerFactory, TracedMessage }
 
 import scala.concurrent.Future
 
